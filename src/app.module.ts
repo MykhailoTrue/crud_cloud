@@ -20,6 +20,9 @@ import { UsersModule } from './users/users.module';
         database: config.get('DB_NAME'),
         autoLoadEntities: true,
         synchronize: true,
+        ssl: {
+          rejectUnauthorized: false,
+        }
       }),
     }),
     UsersModule,
